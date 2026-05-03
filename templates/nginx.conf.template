@@ -1,0 +1,25 @@
+upstream back {
+    server ${API_HOST}:${API_PORT};
+}
+
+server {
+    listen ${APP_PORT} default_server;
+
+    root /data/www;
+
+    index index.html;
+    server_name _;
+
+    location / {
+        try_files $uri /index.html;        
+    }
+
+    location /api/ {
+      default_type application/json;
+      proxy_hide_header Content-Location;
+      add_header Content-Location /api/$upstream_http_content_location;
+      proxy_set_header Connection "";
+      proxy_http_version 1.1;
+      proxy_pass http://back/;
+    }    
+}

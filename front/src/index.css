@@ -1,0 +1,50 @@
+:root {
+  --app-header-background-color: #213547;
+  --app-header-color: #ffffff;
+  --header-height: 3em;
+  --header-background-color: lightslategray;
+  --header-color: #ffffff;
+  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --border: 1px solid lightgray;
+  --button-background-color: darkslateblue;
+  --button-width: 7em;
+  --button-color: #ffffff;
+  --button-padding: 0.5em;
+  --label-width: 8em;
+  --collection-header-height: 3em;
+  --collection-header-background-color: var(--header-background-color);
+  --collection-header-color: var(--header-color);
+  --collection-header-font-weight: bold;
+  --collection-footer-height: var(--collection-header-height);
+  --detail-header-height: 2em;
+  --detail-background-color: lightsteelblue;
+  --detail-color: #213547;
+  --view-header-height: var(--collection-header-height);
+  --view-header-background-color: var(--collection-header-background-color);
+  --view-header-color: var(--header-color);
+  --view-header-font-weight: bold;
+  --view-footer-height: var(--collection-header-height);
+  --selected-item-background-color: darkslateblue;
+  --selected-item-color: white;
+  --highlighted-item-background-color: lightsteelblue;
+  --highlighted-item-color: var(--detail-color);
+  
+
+  font-family: var(--font-family);
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  background-color: whitesmoke;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;  
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

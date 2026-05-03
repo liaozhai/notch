@@ -1,0 +1,32 @@
+{
+  "name": "notch-back",
+  "packageManager": "yarn@4.13.0",
+  "dependencies": {
+    "@fastify/autoload": "^6.3.1",
+    "@mikro-orm/cli": "^7.0.2",
+    "@mikro-orm/core": "^7.0.2",
+    "@mikro-orm/entity-generator": "^7.0.2",
+    "@mikro-orm/postgresql": "^7.0.2",
+    "fastify": "^5.8.2",
+    "fastify-plugin": "^5.1.0",
+    "fluent-json-schema": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "fastify-tsconfig": "^3.0.0",
+    "prettier": "^3.8.1",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "mikro-orm": {
+    "configPaths": [
+      "./src/mikro-orm.config.ts",
+      "./dist/mikro-orm.config.js"
+    ]
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "tsx src/app.ts"
+  }
+}

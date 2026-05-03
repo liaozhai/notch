@@ -1,0 +1,56 @@
+volumes:
+  notch-db:
+    name: notch-db
+
+services:
+
+  db:
+    build: ./db
+    image: notch-db
+    container_name: notch-db
+    ports:
+      - 5434:5432 ## 5434 to connect by external tools
+    environment:
+      POSTGRES_DB: $DB_NAME
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: $DB_PASSWORD
+    healthcheck:
+      test: [ "CMD", "pg_isready" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    volumes:
+      - "notch-db:/var/lib/postgresql"
+
+  back:
+    build: ./back
+    image: notch-back
+    container_name: notch-back
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+      DB_USER: postgres
+      DB_PASSWORD: $DB_PASSWORD
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: $DB_NAME
+    depends_on:
+      db:
+        condition: service_healthy
+
+  front:
+    build: ./front
+    image: notch-front
+    container_name: notch-front
+    ports:
+      - $PORT:$PORT
+    environment:
+      APP_PORT: $PORT
+      API_HOST: back
+      API_PORT: 3000
+    volumes:
+      - "./templates:/etc/nginx/templates:ro"
+    depends_on:
+      - back

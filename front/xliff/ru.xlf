@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file target-language="ru" source-language="en" original="lit-localize-inputs"
+    datatype="plaintext">
+    <body>
+      <trans-unit id="s1802f2190f340cf1">
+        <source>Books</source>
+        <target>Книги</target>
+      </trans-unit>
+      <trans-unit id="sbd88714c242e4a7f">
+        <source>Authors</source>
+        <target>Авторы</target>
+      </trans-unit>
+      <trans-unit id="s33b167859a445149">
+        <source>Genres</source>
+        <target>Жанры</target>
+      </trans-unit>
+      <trans-unit id="s03aa3cfb08dff960">
+        <source>Tags</source>
+        <target>Темы</target>
+      </trans-unit>
+      <trans-unit id="sad639650f1f8e76c">
+        <source>Digital Library</source>
+        <target>Электронная библиотека</target>
+      </trans-unit>
+      <trans-unit id="s99f110d27e30b289">
+        <source>Title</source>
+        <target>Название</target>
+      </trans-unit>
+      <trans-unit id="sf7bdcea7c8207cb8">
+        <source>Book</source>
+        <target>Книга</target>
+      </trans-unit>
+      <trans-unit id="s01d32b35baa3b676">
+        <source>Author</source>
+        <target>Автор</target>
+      </trans-unit>
+      <trans-unit id="s6e8059179423bfa0">
+        <source>Last name</source>
+        <target>Фамилия</target>
+      </trans-unit>
+      <trans-unit id="sab459038e3c6bcb8">
+        <source>First name</source>
+        <target>Имя</target>
+      </trans-unit>
+      <trans-unit id="s0b4cbc6627ba254b">
+        <source>Middle name</source>
+        <target>Отчество, второе имя</target>
+      </trans-unit>
+      <trans-unit id="s6ded4a3d48f0dd66">
+        <source>Editions</source>
+        <target>Издания</target>
+      </trans-unit>
+      <trans-unit id="sab01daa76a48769f">
+        <source>pages</source>
+        <target>с.</target>
+      </trans-unit>
+      <trans-unit id="s05c8335db69abe71">
+        <source>Edition</source>
+        <target>Издание</target>
+      </trans-unit>
+      <trans-unit id="sa6f2645578b2d2bc">
+        <source>Year</source>
+        <target>Год</target>
+      </trans-unit>
+      <trans-unit id="s6ac0c20ddc5c15ff">
+        <source>Pages</source>
+        <target>Страниц</target>
+      </trans-unit>
+      <trans-unit id="s6d3b4d0561ba1cff">
+        <source>Publisher</source>
+        <target>Издатель</target>
+      </trans-unit>
+      <trans-unit id="sefcf950b3cc4fc3b">
+        <source>Language</source>
+        <target>Язык</target>
+      </trans-unit>
+      <trans-unit id="s0bb8e100e5488b60">
+        <source>Genre</source>
+        <target>Жанр</target>
+      </trans-unit>
+      <trans-unit id="sef49aec68fd1dc66">
+        <source>Name</source>
+        <target>Название</target>
+      </trans-unit>
+      <trans-unit id="s6ce0cb19e201b153">
+        <source>Tag</source>
+        <target>Тема</target>
+      </trans-unit>
+      <trans-unit id="se8b5ef22b294efa0">
+        <source>Original title</source>
+        <target>Название на языке оригинала</target>
+      </trans-unit>
+      <trans-unit id="s2ceb11be2290bb1b">
+        <source>Cancel</source>
+        <target>Отменить</target>
+      </trans-unit>
+      <trans-unit id="s64ef2a6c2dd1d3d1">
+        <source>Edit</source>
+        <target>Редактировать</target>
+      </trans-unit>
+      <trans-unit id="s55e06c250f3e81e4">
+        <source>Publishers</source>
+        <target>Издатели</target>
+      </trans-unit>
+      <trans-unit id="s42b68a1842b8ae58">
+        <source>Languages</source>
+        <target>Языки</target>
+      </trans-unit>
+      <trans-unit id="s820de0b4a6ef5255">
+        <source>Lang</source>
+        <target>Язык</target>
+      </trans-unit>
+      <trans-unit id="s091d3d07b5b3076f">
+        <source>OK</source>
+        <target>Подтвердить</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

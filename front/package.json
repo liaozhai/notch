@@ -1,0 +1,29 @@
+{
+  "name": "notch",
+  "version": "0.0.1",
+  "packageManager": "yarn@4.13.0",
+  "devDependencies": {
+    "@lit/localize-tools": "^0.8.1",
+    "@types/node": "^25.5.0",
+    "prettier": "^3.8.1",
+    "terser": "^5.46.2",
+    "typescript": "^6.0.2",
+    "vite": "^8.0.2"
+  },
+  "dependencies": {
+    "@lit-labs/router": "^0.1.4",
+    "@lit/context": "^1.1.6",
+    "@lit/localize": "^0.12.2",
+    "@lit/task": "^1.0.3",
+    "axios": "^1.13.6",
+    "lit": "^3.3.2",
+    "xstate": "^5.30.0"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite dev",
+    "start": "vite",
+    "localize:extract": "lit-localize extract",
+    "localize:build": "lit-localize build"
+  }
+}
