@@ -1,7 +1,6 @@
 # notch
 ## Why?
-The reason behind this small project is that I needed a simple and fast library management application with minimalistic UI. The sample data contain a small part of my personal library.
-Did I succeed? Well, it's not for me to judge. Do whatever you want with it.
+The reason behind this small project is that I needed a simple and fast library management application with minimalistic UI. The sample data contain a small part of my personal library. Despite being simple and straight-forward, this app gives an example of using state machines to implement a complex logic. Did I succeed? Well, it's not for me to judge. See for yourself.
 ## Pre-requisites
 The only prerequisite is Docker environment installed on the host machine.
 ## Installation
