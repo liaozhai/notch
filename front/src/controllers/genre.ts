@@ -45,8 +45,8 @@ class GenreController implements EntityController {
 
     change(e: CustomEvent<any>) {
         e.stopPropagation();
-        const { firstName, middleName, lastName } = e.detail;
-        actor.send({ type: "genre.change", firstName, middleName, lastName });
+        const { name } = e.detail;
+        actor.send({ type: "genre.change", name });
     }
 
     save(e: CustomEvent<any>) {

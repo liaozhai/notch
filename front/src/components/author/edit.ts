@@ -71,13 +71,13 @@ export class AuthorEdit extends LitElement implements Author {
     `;
 
     @query("#first-name")
-    private _firstName!: HTMLTextAreaElement;
+    private _firstName!: HTMLInputElement;
 
     @query("#middle-name")
-    private _middleName!: HTMLTextAreaElement;
+    private _middleName!: HTMLInputElement;
 
     @query("#last-name")
-    private _lastName!: HTMLTextAreaElement;
+    private _lastName!: HTMLInputElement;
 
     @property({ type: Boolean })
     details = false;
@@ -169,23 +169,26 @@ export class AuthorEdit extends LitElement implements Author {
                 <div class="sx-author-edit-header">${msg("Author")}</div>
                 <div class="sx-author-edit-content">
                     <label>${msg("Last name")}</label>
-                    <textarea
+                    <input
+                        type="text"
                         id="last-name"
                         @keyup="${this._change}"
-                        .value="${this.lastName}"
-                    ></textarea>
+                        value="${this.lastName}"
+                    />
                     <label>${msg("First name")}</label>
-                    <textarea
+                    <input
+                        type="text"
                         id="first-name"
                         @keyup="${this._change}"
-                        .value="${this.firstName}"
-                    ></textarea>
+                        value="${this.firstName}"
+                    />
                     <label>${msg("Middle name")}</label>
-                    <textarea
+                    <input
+                        type="text"
                         id="middle-name"
                         @keyup="${this._change}"
-                        .value="${this.middleName}"
-                    ></textarea>
+                        value="${this.middleName}"
+                    />
                     <label>${msg("Books")}</label>
                     <sx-detail
                         ?add="${this.details}"

@@ -71,7 +71,7 @@ export class GenreEdit extends LitElement implements Genre {
     `;
 
     @query("#name")
-    private _name!: HTMLTextAreaElement;
+    private _name!: HTMLInputElement;
 
     @property({ type: Boolean })
     details = false;
@@ -155,11 +155,12 @@ export class GenreEdit extends LitElement implements Genre {
                 <div class="sx-genre-edit-header">${msg("Genre")}</div>
                 <div class="sx-genre-edit-content">
                     <label>${msg("Name")}</label>
-                    <textarea
+                    <input
                         id="name"
+                        type="text"
                         @keyup="${this._change}"
-                        .value="${this.name}"
-                    ></textarea>
+                        value="${this.name}"
+                    />
                     <label>${msg("Books")}</label>
                     <sx-detail
                         ?add="${this.details}"

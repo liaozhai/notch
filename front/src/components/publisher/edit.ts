@@ -71,7 +71,7 @@ export class PublisherEdit extends LitElement implements Publisher {
     `;
 
     @query("#name")
-    private _name!: HTMLTextAreaElement;
+    private _name!: HTMLInputElement;
 
     @property()
     name!: string;
@@ -115,12 +115,12 @@ export class PublisherEdit extends LitElement implements Publisher {
                 <div class="sx-publisher-edit-header">${msg("Publisher")}</div>
                 <div class="sx-publisher-edit-content">
                     <label>${msg("Name")}</label>
-                    <textarea
+                    <input
+                        type="text"
                         id="name"
                         @keyup="${this._change}"
-                        .value="${this.name}"
-                    >
-                    </textarea>
+                        value="${this.name}"
+                    />
                 </div>
                 <div class="sx-publisher-edit-footer">
                     <button @click="${this._save}">${msg("OK")}</button>

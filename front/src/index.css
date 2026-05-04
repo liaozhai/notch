@@ -7,10 +7,10 @@
   --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   --border: 1px solid lightgray;
   --button-background-color: darkslateblue;
-  --button-width: 7em;
+  --button-width: 8em;
   --button-color: #ffffff;
   --button-padding: 0.5em;
-  --label-width: 8em;
+  --label-width: 7em;
   --collection-header-height: 3em;
   --collection-header-background-color: var(--header-background-color);
   --collection-header-color: var(--header-color);

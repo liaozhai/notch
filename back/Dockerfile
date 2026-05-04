@@ -1,10 +1,6 @@
 FROM node:24-alpine
+COPY . /app
 WORKDIR /app
-COPY package.json yarn.lock ./
-COPY . .
-RUN corepack enable
-RUN yarn set version stable
-RUN yarn
-RUN yarn build
+RUN corepack enable && yarn set version 4.13.0 && yarn install
 EXPOSE 3000
 CMD ["yarn", "start"]

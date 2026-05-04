@@ -4,7 +4,7 @@ import {
     EntityManager,
     EntityRepository,
 } from "@mikro-orm/postgresql";
-import config from "./mikro-orm.config.js";
+import { getConfig } from "./mikro-orm.config.js";
 import { Author, IAuthor } from "./entities/Author";
 import { Book, IBook } from "./entities/Book";
 import { Edition, IEdition } from "./entities/Edition";
@@ -32,6 +32,8 @@ export function initORM(options?: Partial<Options>): Services {
         return cache;
     }
 
+    const config = getConfig();
+    console.log("CFG:", config);
     const orm = new MikroORM({
         ...config,
         ...options,

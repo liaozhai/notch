@@ -71,7 +71,7 @@ export class TagEdit extends LitElement implements Tag {
     `;
 
     @query("#name")
-    private _name!: HTMLTextAreaElement;
+    private _name!: HTMLInputElement;
 
     @property({ type: Boolean })
     details = false;
@@ -159,7 +159,7 @@ export class TagEdit extends LitElement implements Tag {
                         id="name"
                         type="text"
                         @keyup="${this._change}"
-                        .value="${this.name}"
+                        value="${this.name}"
                     />
                     <label>${msg("Books")}</label>
                     <sx-detail

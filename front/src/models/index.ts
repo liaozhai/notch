@@ -38,8 +38,8 @@ export interface Edition extends Selectable {
     pages: number;
     year?: number;
     book: string;
-    lang?: Lang;
-    publisher?: Publisher;
+    lang?: string;
+    publisher?: string;
 }
 
 export interface Book extends Selectable {

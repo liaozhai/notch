@@ -72,7 +72,7 @@ export class LangEdit extends LitElement implements Lang {
     `;
 
     @query("#name")
-    private _name!: HTMLTextAreaElement;
+    private _name!: HTMLInputElement;
 
     @property()
     name!: string;
@@ -120,7 +120,7 @@ export class LangEdit extends LitElement implements Lang {
                         id="name"
                         type="text"
                         @keyup="${this._change}"
-                        .value="${this.name}"
+                        value="${this.name}"
                     />
                 </div>
                 <div class="sx-lang-edit-footer">

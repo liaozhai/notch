@@ -41,7 +41,7 @@ export class BookEdit extends LitElement implements Book {
         .sx-book-edit-content {
             display: grid;
             grid-template-columns: auto 1fr;
-            grid-template-rows: auto repeat(6, 1fr);
+            grid-template-rows: auto auto repeat(4, 1fr);
             gap: 1em;
             padding: 1em;
             align-content: start;
@@ -75,11 +75,11 @@ export class BookEdit extends LitElement implements Book {
         }
     `;
 
-    @query(".title")
-    private _title!: HTMLTextAreaElement;
+    @query("#title")
+    private _title!: HTMLInputElement;
 
-    @query(".original-title")
-    private _originalTitle!: HTMLTextAreaElement;
+    @query("#original-title")
+    private _originalTitle!: HTMLInputElement;
 
     @property({ type: Boolean })
     details = false;
@@ -281,17 +281,19 @@ export class BookEdit extends LitElement implements Book {
                 <div class="sx-book-edit-header">${msg("Book")}</div>
                 <div class="sx-book-edit-content">
                     <label>${msg("Title")}</label>
-                    <textarea
-                        class="title"
+                    <input
+                        type="text"
+                        id="title"
                         @keyup="${this._change}"
-                        .value="${this.title}"
-                    ></textarea>
+                        value="${this.title}"
+                    />
                     <label>${msg("Original title")}</label>
-                    <textarea
-                        class="original-title"
+                    <input
+                        type="text"
+                        id="original-title"
                         @keyup="${this._change}"
-                        .value="${this.originalTitle}"
-                    ></textarea>
+                        value="${this.originalTitle}"
+                    />
                     <label>${msg("Authors")}</label>
                     <sx-detail
                         ?add="${this.details}"

@@ -176,7 +176,7 @@ export class EditionEdit extends LitElement {
                         min="1"
                         id="year"
                         value="${ifDefined(this.year)}"
-                        @keyup="${this._change}"
+                        @input="${this._change}"
                     />
                     <label>${msg("Pages")}</label>
                     <input
@@ -184,7 +184,7 @@ export class EditionEdit extends LitElement {
                         id="pages"
                         min="1"
                         value="${this.pages}"
-                        @keyup="${this._change}"
+                        @input="${this._change}"
                     />
                     <label>${msg("Publisher")}</label>
                     <select id="publisher" @change="${this._change}">

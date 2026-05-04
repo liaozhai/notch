@@ -29,7 +29,7 @@ const start = async () => {
     try {
         await fastify.ready();
         await fastify.listen({
-            port: 3000,
+            port: (process.env.PORT && +process.env.PORT) || 3000,
             host: "0.0.0.0",
         });
     } catch (err) {

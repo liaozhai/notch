@@ -190,7 +190,7 @@ const fsm = setup({
                 onDone: {
                     target: "authors_ready",
                     actions: assign({
-                        authors: ({ event }) => {                            
+                        authors: ({ event }) => {
                             return {
                                 many: event.output,
                                 filtered: event.output,
@@ -1190,19 +1190,16 @@ const fsm = setup({
                     target: "genres_edit_ready",
                     actions: assign({
                         genres: ({ event, context: { genres } }) => {
-                            const { firstName, middleName, lastName } =
-                                event as Extract<
-                                    EntityEvent,
-                                    { type: "genre.change" }
-                                >;
+                            const { name } = event as Extract<
+                                EntityEvent,
+                                { type: "genre.change" }
+                            >;
                             const { one } = genres;
                             return {
                                 ...genres,
                                 one: {
                                     ...one!,
-                                    firstName,
-                                    middleName,
-                                    lastName,
+                                    name,
                                 },
                             };
                         },
