@@ -16,3 +16,4 @@ PORT=<port>
 docker compose build
 docker compose up -d
 ```
+5. Open `http://localhost:<port>`
