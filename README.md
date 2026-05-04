@@ -5,7 +5,15 @@ Did I succeed? Well, it's not for me to judge. Do whatever you want with it.
 ## Pre-requisites
 The only prerequisite is Docker environment installed on the host machine.
 ## Installation
-The installation procedure is as simple as it can be - clone the repository then run the following command in the project root directory:
+The installation procedure is as simple as it can be
+1. Clone the repository.
+2. Add password.txt file containing the database password (choose whatever you like) to the root directory.
+3. Add .env file with the following content, where `<port>` is a desired application port number, for example 8000:
 ```
+PORT=<port>
+```
+4. Run the following commands in the project root directory:
+```
+docker compose build
 docker compose up -d
 ```
